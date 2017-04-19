@@ -58,7 +58,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RectangleMy.cs" />
     <Compile Include="RegularPolygon.cs" />
-    <Compile Include="Rectangle.cs" />
     <Compile Include="Shape.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
