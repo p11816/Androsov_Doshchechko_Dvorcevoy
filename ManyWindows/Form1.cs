@@ -21,7 +21,8 @@ namespace ManyWindows
         {
             InitializeComponent();
             shapes.Add(new Circle(000, 000, 100));
-            shapes.Add(new Circle(100, 100, 90));
+            shapes.Add(new Circle(230, 000, 90));
+            shapes.Add(new RectangleMy(450, 010, 200, 100));
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -48,11 +49,6 @@ namespace ManyWindows
         private void Form1_Resize(object sender, EventArgs e)
         {
             this.Form1_Paint(sender, null);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
