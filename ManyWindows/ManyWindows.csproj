@@ -59,6 +59,7 @@
     <Compile Include="RectangleMy.cs" />
     <Compile Include="RegularPolygon.cs" />
     <Compile Include="Shape.cs" />
+    <Compile Include="TriangleMy.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

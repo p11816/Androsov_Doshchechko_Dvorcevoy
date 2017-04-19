@@ -21,9 +21,10 @@ namespace ManyWindows
         {
             InitializeComponent();
             shapes.Add(new Circle(000, 000, 100));
-            shapes.Add(new Circle(100, 100, 90));
+            shapes.Add(new RectangleMy(20, 400, 300, 150));
             shapes.Add(new RegularPolygon(6, 100, 500, 400));
             shapes.Add(new LineMy(300, 300, 350, 410));
+            shapes.Add(new RegularTriangleMy(300, 200, 150));
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

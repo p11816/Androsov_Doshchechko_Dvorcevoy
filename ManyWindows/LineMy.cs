@@ -22,8 +22,6 @@ namespace ManyWindows.Shapes
         public override void Paint(Graphics g)
         {
             g.DrawLine(pen, point, pointSecond);
-            g.DrawArc(pen, 200, 200, 400, 200, 0, 360
-                );
         }
 
         public override bool isInside(float p1, float p2) { return false; }
