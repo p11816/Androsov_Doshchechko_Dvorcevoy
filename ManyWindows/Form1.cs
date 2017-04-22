@@ -16,6 +16,8 @@ namespace ManyWindows
     {
 
         List<Shape> shapes = new List<Shape>();
+        Shape shape_focus = null;
+
 
         public Form1()
         {
@@ -60,8 +62,48 @@ namespace ManyWindows
                 if (s.isInside(e.X, e.Y))
                 {
                     this.Text = "Выбран элемент №"+s.Id;
-                }
+                    shape_focus = s;
+                    SolidBrush Buff_brush = (SolidBrush)shape_focus.brush;
 
+                    panel1.BackColor = Buff_brush.Color;
+                    panel2.BackColor = shape_focus.pen.Color;
+                }
+            }
+        }
+
+
+        //цвет фигуры--------------
+        private void panel1_Click(object sender, EventArgs e)
+        {
+
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                panel1.BackColor = colorDialog1.Color;
+
+                if (shape_focus == null)
+                    return;
+
+                shape_focus.brush = new SolidBrush(colorDialog1.Color);
+
+                this.Form1_Paint(sender, null);
+            }
+        }
+
+        //цвет обводки-----------------
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                panel2.BackColor = colorDialog1.Color;
+
+                if (shape_focus == null)
+                    return;
+
+                Pen new_pen = new Pen(colorDialog1.Color);
+                new_pen.Width = shape_focus.pen.Width;
+                shape_focus.pen = new_pen;
+
+                this.Form1_Paint(sender, null);
             }
         }
     }
