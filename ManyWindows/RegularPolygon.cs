@@ -12,7 +12,7 @@ namespace ManyWindows.Shapes
         int nSide;          // количество сторон многоугольника
         float radius;         // радиус многоугольника
         PointF center;      // коор. центра многоугольника
-        PointF[] p;         // точки многоугольника
+        public PointF[] p;         // точки многоугольника
 
         public RegularPolygon(int nSide, float radius, float X, float Y)
         {
@@ -21,6 +21,7 @@ namespace ManyWindows.Shapes
             center.X = X;
             center.Y = Y;
         }
+
 
         // метод для вычисления точек многоугольника относительно введенных данных
         private void SearchPoint(float angle)
@@ -36,7 +37,7 @@ namespace ManyWindows.Shapes
         }
 
 
-        public override void Paint(System.Drawing.Graphics g)
+        public override void Paint(Graphics g)
         {
             if (nSide < 0 || radius < 0)
             {

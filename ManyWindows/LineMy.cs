@@ -10,6 +10,7 @@ namespace ManyWindows.Shapes
     class LineMy : Shape
     {
         PointF pointSecond;
+        
         public LineMy(float Xfirst, float Yfirst, float Xsecond, float Ysecond)
         {
             pen = new Pen(Color.Green, 5);
@@ -18,6 +19,15 @@ namespace ManyWindows.Shapes
             pointSecond.X = Xsecond;
             pointSecond.Y = Ysecond;
         }
+
+        public PointF PointSecond
+        {
+            get
+            {
+                return pointSecond;
+            }
+        }
+          
 
         public override void Paint(Graphics g)
         {

@@ -11,7 +11,7 @@ namespace ManyWindows.Shapes
     {
         float side;           // длина стороны
         static int nSide = 3;
-        PointF[] p;
+        public PointF[] p;
         float radius;
 
         public RegularTriangleMy(float X, float Y, float side)
