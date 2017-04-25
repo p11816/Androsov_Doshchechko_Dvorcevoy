@@ -64,5 +64,16 @@ namespace ManyWindows
 
             }
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Credits:\nAlexander Androsov\ncoder,\nValentin Doshecko\ncoder,\nIlya Dvortsevoi\ncoder",
+                "About Vector graphics editor light");
+        }
+
+        private void closeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
