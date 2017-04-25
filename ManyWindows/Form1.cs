@@ -458,5 +458,72 @@ namespace ManyWindows
             // а тут обновляем(старое стираем)
             this.panel1_Resize(null, null); /// ???????? что это как это??????
         }
+
+
+        // ///////////////////////////// Menu Up /////////////////////////////
+        private void lineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Не доступно");
+        }
+
+        private void triangleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegularTriangleMy Trngl = new RegularTriangleMy(panel1.Width/2, panel1.Height/2, 200);
+            shapes.Add(Trngl);
+            panel1_Paint(sender, null);
+        }
+
+        private void polygonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegularPolygon plg = new RegularPolygon(5, 100, panel1.Width / 2, panel1.Height / 2);
+            shapes.Add(plg);
+            panel1_Paint(sender, null);
+        }
+
+        private void rectangleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            float width = 200;
+            float height = 100;
+            RectangleMy rct = new RectangleMy(panel1.Width / 2 - (width/2), panel1.Height / 2 - (height/2), width, height);
+            shapes.Add(rct);
+            panel1_Paint(sender, null);
+        }
+
+        private void circleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            float r = 100;
+            Circle clc = new Circle(panel1.Width / 2 - r, panel1.Height / 2 - r, 100);
+            shapes.Add(clc);
+            panel1_Paint(sender, null);
+        }
+
+
+        /// menu left/////////////////////  круг ////////////////
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            circleToolStripMenuItem_Click(sender, null);
+        }
+
+        // многоугольник
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            polygonToolStripMenuItem_Click(sender, null);
+        }
+
+        // прямоугольник
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            rectangleToolStripMenuItem_Click(sender, null);
+        }
+        // треугольник
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            triangleToolStripMenuItem_Click(sender, null);
+        }
+        // линия
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            lineToolStripMenuItem_Click(sender, null);
+        }
     }
 }
